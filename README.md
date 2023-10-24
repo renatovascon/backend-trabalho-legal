@@ -1,14 +1,14 @@
 ### MongoDB
+
 ### Install ORM mongoose
-``` bash
+
+```bash
 $ npm install mongoose
 ```
 
-
-
-
-
-
+para criar uma senha para envio de emails
+deve ir ao myaccount.google e ir na opção de validação em duas etapas
+depois ir a senhas de app
 
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
