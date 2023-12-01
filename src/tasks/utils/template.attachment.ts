@@ -1,44 +1,44 @@
 export const templateAttachment = (textInput) => {
-    const { nome, end, cidade, cep, valor } = textInput;
-    const resume = {
-        products: [
-            {
-                prize: Number,
-                quantity: Number,
-                total: Number,
-            },
-            {
-                prize: Number,
-                quantity: Number,
-                total: Number,
-            },
-            {
-                prize: Number,
-                quantity: Number,
-                total: Number,
-            }
-        ],
-        invoice: {
-            date: new Date,
-            number: String
-        },
-    }
+  const { nome, end, cidade, cep, valor, cpfCnpj } = textInput;
+  const resume = {
+    products: [
+      {
+        prize: Number,
+        quantity: Number,
+        total: Number,
+      },
+      {
+        prize: Number,
+        quantity: Number,
+        total: Number,
+      },
+      {
+        prize: Number,
+        quantity: Number,
+        total: Number,
+      },
+    ],
+    invoice: {
+      date: new Date(),
+      number: String,
+    },
+  };
 
-    let tableRows = '';
+  let tableRows = '';
 
-    // Loop sobre os produtos e adicione as linhas da tabela dinamicamente
-    for (const product of resume.products) {
-        const { prize, quantity, total } = product;
-        tableRows += `
+  // Loop sobre os produtos e adicione as linhas da tabela dinamicamente
+  for (const product of resume.products) {
+    const { prize, quantity, total } = product;
+    tableRows += `
             <tr>
                 <td>Produto</td>
                 <td>${quantity}</td>
                 <td>${prize}</td>
                 <td>${total}</td>
             </tr>`;
-    }
+  }
 
-    return `<!DOCTYPE html>
+  return `<!DOCTYPE html>
         <html lang="pt-BR">
         <head>
             <meta charset="UTF-8">
@@ -94,6 +94,7 @@ export const templateAttachment = (textInput) => {
                     <p>Endereço: ${end},</p>
                     <p>Cidade: ${cidade}</p>
                     <p>CEP: ${cep}</p>
+                    <p>CNPJ: ${cpfCnpj}</p>
                 </div>
                 <table>
                     <thead>
@@ -114,4 +115,4 @@ export const templateAttachment = (textInput) => {
             </div>
         </body>
         </html>`;
-}
+};

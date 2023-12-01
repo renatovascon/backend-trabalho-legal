@@ -1,5 +1,5 @@
 export const templateBody = (textInput) => {
-    const { nome, end, cidade, cep, valor} = textInput
+    const { nome, end, cidade, cep, valor, cpfCnpj } = textInput;
 
     return `<!DOCTYPE html>
    <html lang="pt-BR">
@@ -57,6 +57,7 @@ export const templateBody = (textInput) => {
                <p>Endereço: ${end},</p>
                <p>Cidade: ${cidade}</p>
                <p>CEP: ${cep}</p>
+               <p>CNPJ: ${cpfCnpj}</p>
            </div>
            <table>
                <thead>
@@ -87,5 +88,5 @@ export const templateBody = (textInput) => {
            </div>
        </div>
    </body>
-   </html>`
+   </html>`;
 }
